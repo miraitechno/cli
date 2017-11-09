@@ -157,8 +157,8 @@ func (s *stmt) bindParam(idx int, v driver.Value) error {
 		if d {
 			b = 1
 		}
-		ctype = C.SQL_C_BIT
-		sqltype = C.SQL_BIT
+		ctype = C.SQL_C_TINYINT
+		sqltype = C.SQL_TINYINT
 		buf = unsafe.Pointer(&b)
 		size = 1
 	case float64:
